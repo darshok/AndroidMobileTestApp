@@ -1,7 +1,9 @@
 package com.example.androidmobiletestapp
 
+import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.TypedValue
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidmobiletestapp.adapter.PlanetAdapter
