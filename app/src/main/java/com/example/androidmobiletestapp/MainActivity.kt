@@ -48,10 +48,10 @@ class MainActivity : AppCompatActivity() {
                 if (call.isSuccessful && planetsArray != null) {
                     planetImages.clear()
                     for (planet in planetsArray) {
-                        val imageUrl = planet.imageUrl
-                        val date = planet.date
-                        val copyright = planet.copyright
-                        val title = planet.title
+                        val imageUrl = planet.imageUrl ?: ""
+                        val date = planet.date ?: ""
+                        val copyright = planet.copyright ?: ""
+                        val title = planet.title ?: ""
                         planetImages.add(PlanetResponse(date, copyright, title, imageUrl))
                     }
                     adapter.notifyDataSetChanged()
