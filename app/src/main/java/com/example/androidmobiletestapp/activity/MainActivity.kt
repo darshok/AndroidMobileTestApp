@@ -1,11 +1,11 @@
-package com.example.androidmobiletestapp
+package com.example.androidmobiletestapp.activity
 
-import android.content.res.Resources
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.util.TypedValue
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.androidmobiletestapp.R
 import com.example.androidmobiletestapp.adapter.PlanetAdapter
 import com.example.androidmobiletestapp.api.APIService
 import com.example.androidmobiletestapp.data.PlanetResponse
@@ -28,6 +28,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initRecyclerView()
+
+        binding.btnCreatePlanet.setOnClickListener {
+            createFormPlanetActivity()
+        }
     }
 
     private fun initRecyclerView() {
@@ -69,8 +73,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun createFormPlanetActivity() {
+        val intent = Intent(this, FormPlanetActivity::class.java)
+        startActivity(intent)
+    }
+
     private fun showError() {
-        Toast.makeText(this, "Error getting planets", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.error_api_call), Toast.LENGTH_SHORT).show()
     }
 
     private fun onItemClicked(planetResponse: PlanetResponse) {

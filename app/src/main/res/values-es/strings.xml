@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Android Mobile Test App</string>
+    <string name="main_app_bar">Lista de planetas</string>
+    <string name="create_planet_app_bar">Crear planeta</string>
+    <string name="date_text">Fecha</string>
+    <string name="title_text">Título</string>
+    <string name="copyright_text">Derechos de autor</string>
+    <string name="image_url_text">URL de la imagen</string>
+    <string name="save_button_text">Guardar</string>
+    <string name="empty_field_error">El campo no puede ser vacio</string>
+    <string name="created_text">Planeta creado</string>
+    <string name="invalid_form_text">Faltan campos por rellenar</string>
+    <string name="error_api_call">Error al obtener los planetas</string>
+</resources>
