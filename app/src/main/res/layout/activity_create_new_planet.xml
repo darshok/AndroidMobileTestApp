@@ -28,11 +28,13 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
+        app:helperTextTextColor="@android:color/holo_red_dark"
         android:hint="Title"
         app:layout_constraintBottom_toTopOf="@id/tiCopyright"
         app:layout_constraintTop_toBottomOf="@id/appBarLayout">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -45,11 +47,13 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
+        app:helperTextTextColor="@android:color/holo_red_dark"
         android:hint="Copyright"
         app:layout_constraintBottom_toTopOf="@id/tiDate"
         app:layout_constraintTop_toBottomOf="@id/tiTitle">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCopyright"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -62,11 +66,13 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
+        app:helperTextTextColor="@android:color/holo_red_dark"
         android:hint="Date"
         app:layout_constraintBottom_toTopOf="@id/tiImageUrl"
         app:layout_constraintTop_toBottomOf="@id/tiCopyright">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -79,11 +85,13 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
+        app:helperTextTextColor="@android:color/holo_red_dark"
         android:hint="ImageUrl"
         app:layout_constraintBottom_toTopOf="@id/btnCreatePlanet"
         app:layout_constraintTop_toBottomOf="@id/tiDate">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etImageUrl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
