@@ -1,4 +1,4 @@
-package com.example.androidmobiletestapp
+package com.example.androidmobiletestapp.data
 
 import com.google.gson.annotations.SerializedName
 
