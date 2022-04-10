@@ -5,7 +5,10 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidmobiletestapp.adapter.PlanetAdapter
+import com.example.androidmobiletestapp.api.APIService
+import com.example.androidmobiletestapp.data.PlanetResponse
 import com.example.androidmobiletestapp.databinding.ActivityMainBinding
+import com.example.androidmobiletestapp.fragment.ImageDialogFragment
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -67,6 +70,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onItemClicked(planetResponse: PlanetResponse) {
-        Toast.makeText(this, planetResponse.title, Toast.LENGTH_SHORT).show()
+        val imageDialogFragment = ImageDialogFragment()
+        val bundle = Bundle()
+        bundle.putString("imageUrl", planetResponse.imageUrl)
+        imageDialogFragment.arguments = bundle
+        imageDialogFragment.show(supportFragmentManager, "Image Dialog")
     }
 }

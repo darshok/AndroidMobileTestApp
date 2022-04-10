@@ -1,10 +1,9 @@
 package com.example.androidmobiletestapp.adapter
 
 import android.view.View
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.androidmobiletestapp.PlanetResponse
+import com.example.androidmobiletestapp.data.PlanetResponse
 import com.example.androidmobiletestapp.databinding.CardPlanetBinding
 
 

@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/dfo96/AndroidStudioProjects/AndroidMobileTestApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.5435" />
+        <entry key="..\:/Users/dfo96/AndroidStudioProjects/AndroidMobileTestApp/app/src/main/res/drawable/round_corner.xml" value="0.5435" />
         <entry key="..\:/Users/dfo96/AndroidStudioProjects/AndroidMobileTestApp/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/Users/dfo96/AndroidStudioProjects/AndroidMobileTestApp/app/src/main/res/layout/card_planet.xml" value="0.55" />
+        <entry key="..\:/Users/dfo96/AndroidStudioProjects/AndroidMobileTestApp/app/src/main/res/layout/image_dialog.xml" value="0.55" />
         <entry key="..\:/Users/dfo96/AndroidStudioProjects/AndroidMobileTestApp/app/src/main/res/layout/item_planet.xml" value="0.55" />
       </map>
     </option>
