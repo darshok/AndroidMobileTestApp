@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.androidmobiletestapp.R
 import com.example.androidmobiletestapp.databinding.ActivityCreateNewPlanetBinding
 import com.google.android.material.textfield.TextInputLayout
 
@@ -40,7 +41,7 @@ class FormPlanetActivity : AppCompatActivity() {
     private fun validTextInput(textInputLayout: TextInputLayout): String? {
         val copyrightText = textInputLayout.editText?.text.toString()
         if (copyrightText.isEmpty()) {
-            return "El campo no puede ser vacio"
+            return getString(R.string.empty_field_error)
         }
         return null
     }
@@ -52,10 +53,10 @@ class FormPlanetActivity : AppCompatActivity() {
         val validImageUrl = binding.tiImageUrl.editText?.text.toString() != ""
 
         if (validCopyright && validDate && validImageUrl && validTitle) {
-            Toast.makeText(this, "Planeta creado", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.created_text), Toast.LENGTH_SHORT).show()
             finish()
         } else {
-            Toast.makeText(this, "Faltan campos por rellenar", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.invalid_form_text), Toast.LENGTH_SHORT).show()
         }
     }
 }

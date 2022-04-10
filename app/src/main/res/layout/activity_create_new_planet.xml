@@ -29,7 +29,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
         app:helperTextTextColor="@android:color/holo_red_dark"
-        android:hint="Title"
+        android:hint="@string/title_text"
         app:layout_constraintBottom_toTopOf="@id/tiCopyright"
         app:layout_constraintTop_toBottomOf="@id/appBarLayout">
 
@@ -48,7 +48,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
         app:helperTextTextColor="@android:color/holo_red_dark"
-        android:hint="Copyright"
+        android:hint="@string/copyright_text"
         app:layout_constraintBottom_toTopOf="@id/tiDate"
         app:layout_constraintTop_toBottomOf="@id/tiTitle">
 
@@ -67,7 +67,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
         app:helperTextTextColor="@android:color/holo_red_dark"
-        android:hint="Date"
+        android:hint="@string/date_text"
         app:layout_constraintBottom_toTopOf="@id/tiImageUrl"
         app:layout_constraintTop_toBottomOf="@id/tiCopyright">
 
@@ -86,7 +86,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
         app:helperTextTextColor="@android:color/holo_red_dark"
-        android:hint="ImageUrl"
+        android:hint="@string/image_url_text"
         app:layout_constraintBottom_toTopOf="@id/btnCreatePlanet"
         app:layout_constraintTop_toBottomOf="@id/tiDate">
 
@@ -101,9 +101,9 @@
         android:id="@+id/btnCreatePlanet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
-        android:text="Guardar"
+        android:text="@string/save_button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 

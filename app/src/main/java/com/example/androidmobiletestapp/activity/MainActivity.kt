@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.androidmobiletestapp.R
 import com.example.androidmobiletestapp.adapter.PlanetAdapter
 import com.example.androidmobiletestapp.api.APIService
 import com.example.androidmobiletestapp.data.PlanetResponse
@@ -78,7 +79,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showError() {
-        Toast.makeText(this, "Error getting planets", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.error_api_call), Toast.LENGTH_SHORT).show()
     }
 
     private fun onItemClicked(planetResponse: PlanetResponse) {
