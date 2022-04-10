@@ -12,17 +12,14 @@ class PlanetViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     private val binding = CardPlanetBinding.bind(view)
 
-    fun render(planetModel: PlanetResponse) {
+    fun render(planetModel: PlanetResponse, onClickListener: (PlanetResponse) -> Unit) {
         binding.tvDate.text = planetModel.date
         binding.tvCopyright.text = planetModel.copyright
         binding.tvTitle.text = planetModel.title
         Glide.with(binding.ivPlanet.context).load(planetModel.imageUrl).into(binding.ivPlanet)
+
         binding.ivPlanet.setOnClickListener {
-            Toast.makeText(
-                binding.ivPlanet.context,
-                planetModel.title,
-                Toast.LENGTH_SHORT
-            ).show()
+            onClickListener(planetModel)
         }
     }
 }

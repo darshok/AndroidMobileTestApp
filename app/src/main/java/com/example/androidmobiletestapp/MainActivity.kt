@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initRecyclerView() {
-        adapter = PlanetAdapter(planetImages)
+        adapter = PlanetAdapter(planetImages) { planetResponse -> onItemClicked(planetResponse) }
         binding.rvPlanets.layoutManager = LinearLayoutManager(this)
         binding.rvPlanets.adapter = adapter
         searchByCount("100")
@@ -64,5 +64,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun showError() {
         Toast.makeText(this, "Error getting planets", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun onItemClicked(planetResponse: PlanetResponse) {
+        Toast.makeText(this, planetResponse.title, Toast.LENGTH_SHORT).show()
     }
 }
