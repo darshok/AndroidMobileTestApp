@@ -1,5 +1,7 @@
 package com.example.androidmobiletestapp.fragment
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -23,7 +25,8 @@ class ImageDialogFragment: DialogFragment() {
         val bundle = arguments
         val imageUrl = bundle!!.getString("imageUrl")
 
-        Glide.with(binding.ivPlanet.context).load(imageUrl).into(binding.ivPlanet)
+        Glide.with(binding.ivPlanet.context).load(imageUrl).fitCenter().into(binding.ivPlanet)
+        dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
         return binding.root
     }
