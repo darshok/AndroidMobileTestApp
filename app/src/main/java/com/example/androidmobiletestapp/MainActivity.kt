@@ -43,11 +43,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun searchByCount(query: String) {
+        binding.lpiApiCall.show()
         CoroutineScope(Dispatchers.IO).launch {
             val call = getRetrofit().create(APIService::class.java)
                 .getPlanetsByCount("apod?api_key=DEMO_KEY&count=$query")
             val planetsArray = call.body()
             runOnUiThread {
+                binding.lpiApiCall.hide()
                 if (call.isSuccessful && planetsArray != null) {
                     planetImages.clear()
                     for (planet in planetsArray) {

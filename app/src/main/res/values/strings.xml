@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Android Mobile Test App</string>
+    <string name="app_bar">Planet list</string>
 </resources>
