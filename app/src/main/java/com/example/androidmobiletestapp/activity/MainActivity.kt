@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         adapter = PlanetAdapter(planetImages) { planetResponse -> onItemClicked(planetResponse) }
         binding.rvPlanets.layoutManager = LinearLayoutManager(this)
         binding.rvPlanets.adapter = adapter
-        searchByCount("100")
+        searchByCount("10")
     }
 
     private fun getRetrofit(): Retrofit {

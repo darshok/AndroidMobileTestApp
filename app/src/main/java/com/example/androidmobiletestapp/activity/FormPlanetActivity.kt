@@ -21,6 +21,10 @@ class FormPlanetActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        if (intent.hasExtra("topAppBar")) {
+            getViewHolderData()
+        }
+
         textInputFocusListener(binding.etCopyright, binding.tiCopyright)
         textInputFocusListener(binding.etDate, binding.tiDate)
         textInputFocusListener(binding.etTitle, binding.tiTitle)
@@ -28,6 +32,20 @@ class FormPlanetActivity : AppCompatActivity() {
         binding.btnCreatePlanet.setOnClickListener {
             validateForm()
         }
+    }
+
+    private fun getViewHolderData() {
+        val planetCopyright = intent.getStringExtra("planetCopyright")
+        val planetDate = intent.getStringExtra("planetDate")
+        val planetTitle = intent.getStringExtra("planetTitle")
+        val planetImageUrl = intent.getStringExtra("planetImageUrl")
+        val topAppBar = intent.getStringExtra("topAppBar")
+
+        supportActionBar!!.title = topAppBar
+        binding.etCopyright.setText(planetCopyright)
+        binding.etDate.setText(planetDate)
+        binding.etTitle.setText(planetTitle)
+        binding.etImageUrl.setText(planetImageUrl)
     }
 
     private fun textInputFocusListener(editText: EditText, textInputLayout: TextInputLayout) {
@@ -53,7 +71,11 @@ class FormPlanetActivity : AppCompatActivity() {
         val validImageUrl = binding.tiImageUrl.editText?.text.toString() != ""
 
         if (validCopyright && validDate && validImageUrl && validTitle) {
-            Toast.makeText(this, getString(R.string.created_text), Toast.LENGTH_SHORT).show()
+            if (supportActionBar!!.title == getString(R.string.create_planet_app_bar)) {
+                Toast.makeText(this, getString(R.string.created_text), Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, getString(R.string.updated_text), Toast.LENGTH_SHORT).show()
+            }
             finish()
         } else {
             Toast.makeText(this, getString(R.string.invalid_form_text), Toast.LENGTH_SHORT).show()
