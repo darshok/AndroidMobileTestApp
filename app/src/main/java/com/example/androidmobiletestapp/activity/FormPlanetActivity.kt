@@ -5,16 +5,17 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androidmobiletestapp.R
-import com.example.androidmobiletestapp.databinding.ActivityCreateNewPlanetBinding
+import com.example.androidmobiletestapp.databinding.ActivityFormPlanetBinding
+import com.example.androidmobiletestapp.fragment.DatePickerFragment
 import com.google.android.material.textfield.TextInputLayout
 
 class FormPlanetActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityCreateNewPlanetBinding
+    private lateinit var binding: ActivityFormPlanetBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityCreateNewPlanetBinding.inflate(layoutInflater)
+        binding = ActivityFormPlanetBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setSupportActionBar(binding.topAppBar)
@@ -31,6 +32,9 @@ class FormPlanetActivity : AppCompatActivity() {
         textInputFocusListener(binding.etImageUrl, binding.tiImageUrl)
         binding.btnCreatePlanet.setOnClickListener {
             validateForm()
+        }
+        binding.etDate.setOnClickListener {
+            onEditTextDateClicked()
         }
     }
 
@@ -54,6 +58,15 @@ class FormPlanetActivity : AppCompatActivity() {
                 textInputLayout.helperText = validTextInput(textInputLayout)
             }
         }
+    }
+
+    private fun onEditTextDateClicked() {
+        val newFragment = DatePickerFragment.newInstance { _, year, month, day ->
+            val selectedDate = year.toString() + "-" + (month + 1) + "-" + day
+            binding.etDate.setText(selectedDate)
+        }
+
+        newFragment.show(supportFragmentManager, "datePicker")
     }
 
     private fun validTextInput(textInputLayout: TextInputLayout): String? {
