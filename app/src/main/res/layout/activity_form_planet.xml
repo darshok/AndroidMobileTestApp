@@ -87,7 +87,6 @@
         android:layout_marginLeft="16dp"
         app:helperTextTextColor="@android:color/holo_red_dark"
         android:hint="@string/image_url_text"
-        app:layout_constraintBottom_toTopOf="@id/btnCreatePlanet"
         app:layout_constraintTop_toBottomOf="@id/tiDate">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -102,9 +101,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
         android:text="@string/save_button_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tiImageUrl"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
