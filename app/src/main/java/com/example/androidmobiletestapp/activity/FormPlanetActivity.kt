@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androidmobiletestapp.R
 import com.example.androidmobiletestapp.databinding.ActivityFormPlanetBinding
+import com.example.androidmobiletestapp.fragment.DatePickerFragment
 import com.google.android.material.textfield.TextInputLayout
 
 class FormPlanetActivity : AppCompatActivity() {
@@ -32,6 +33,9 @@ class FormPlanetActivity : AppCompatActivity() {
         binding.btnCreatePlanet.setOnClickListener {
             validateForm()
         }
+        binding.etDate.setOnClickListener {
+            onEditTextDateClicked()
+        }
     }
 
     private fun getViewHolderData() {
@@ -54,6 +58,15 @@ class FormPlanetActivity : AppCompatActivity() {
                 textInputLayout.helperText = validTextInput(textInputLayout)
             }
         }
+    }
+
+    private fun onEditTextDateClicked() {
+        val newFragment = DatePickerFragment.newInstance { _, year, month, day ->
+            val selectedDate = year.toString() + "-" + (month + 1) + "-" + day
+            binding.etDate.setText(selectedDate)
+        }
+
+        newFragment.show(supportFragmentManager, "datePicker")
     }
 
     private fun validTextInput(textInputLayout: TextInputLayout): String? {
