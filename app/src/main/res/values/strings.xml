@@ -2,13 +2,16 @@
     <string name="app_name">Android Mobile Test App</string>
     <string name="main_app_bar">Planet list</string>
     <string name="create_planet_app_bar">Create planet</string>
+    <string name="edit_planet_app_bar">Edit planet</string>
     <string name="date_text">Date</string>
     <string name="title_text">Title</string>
     <string name="copyright_text">Copyright</string>
     <string name="image_url_text">Image URL</string>
     <string name="save_button_text">Save</string>
+    <string name="edit_button_text">Edit</string>
     <string name="empty_field_error">The field can not be empty</string>
     <string name="created_text">Planet created</string>
+    <string name="updated_text">Planet updated</string>
     <string name="invalid_form_text">Missing fields to fill</string>
     <string name="error_api_call">Error getting planets</string>
 </resources>

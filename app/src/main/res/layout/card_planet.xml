@@ -46,6 +46,21 @@
                 android:textColor="?android:attr/textColorSecondary"
                 />
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEditPlanet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_button_text"
+                style="?attr/borderlessButtonStyle"
+                />
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
