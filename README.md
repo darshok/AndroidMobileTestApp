@@ -1,6 +1,6 @@
 # AndroidMobileTestApp
 
-La aplicación Android desarrollada en Kotlin, AndroidMobileTestApp, muestra un ejemplo de llamada API para obtener las diferentes imágenes de la API pública de la Nasa "Astronomy Picture of the Day". Ofrece un formulario básico para crear y editar las publicaciones de las imágenes, además de permitir ampliar la imagen una vez seleccionada.
+La aplicación Android desarrollada en Kotlin, AndroidMobileTestApp, muestra un ejemplo de llamada API para obtener las diferentes imágenes de la API pública de la Nasa "Astronomy Picture of the Day". Ofrece un formulario básico para crear y editar las publicaciones de las imágenes, además de permitir ampliar la imagen una vez seleccionada. La app está disponible en español e inglés.
 
 ## Funcionalidades
 
